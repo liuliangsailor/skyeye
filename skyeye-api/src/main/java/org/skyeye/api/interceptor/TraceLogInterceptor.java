@@ -56,9 +56,9 @@ public class TraceLogInterceptor extends HandlerInterceptorAdapter {
             Map<String, String> params = Maps.newHashMap();
             while (names.hasMoreElements()) {
                 String name = names.nextElement();
-                params.put(name, DecodeUtil.decode(request.getParameter(name)));
+//                params.put(name, DecodeUtil.decode(request.getParameter(name)));
             }
-            logger.info("url:[{}] 请求参数:[{}]", request.getRequestURI(), JSON.toJSONString(params));
+//            logger.info("url:[{}] 请求参数:[{}]", request.getRequestURI(), JSON.toJSONString(params));
         }
         THREAD_LOCAL.set(new Slf4JStopWatch());
         return true;
